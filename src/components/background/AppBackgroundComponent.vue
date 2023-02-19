@@ -1,11 +1,10 @@
 <template>
   <div class="h-screen w-screen bg-[#0E9577] relative overflow-hidden z-0">
     <div
-      class="app-texture z-5 opacity-10 w-full h-full absolute top-0 left-0 cover"
+      class="app-texture z-5 opacity-20 w-full h-full absolute top-0 left-0 cover"
     />
     <div class="absolute blur-[250px] bg-opacity-80 app-1" />
-    <div class="absolute blur-[250px] bg-opacity-80 app-2" />
-    <div class="absolute blur-[2500px] bg-opacity-80 app-3" />
+    <div class="absolute blur-[250px] bg-opacity-80 app-3" />
     <div class="absolute blur-[250px] bg-opacity-80 app-4" />
     <div class="absolute blur-[250px] bg-opacity-80 app-5" />
   </div>
@@ -26,7 +25,7 @@ export default {
 
 @keyframes flyPlus {
   100% {
-    transform: rotate(-1turn) translate(100px) rotate(1turn);
+    transform: rotate(1turn) translate(150px) rotate(-1turn);
   }
 }
 
@@ -34,24 +33,14 @@ export default {
   border-radius: 100%;
   width: 900px;
   height: 400px;
-  background-color: rgba(4, 222, 173, 0.5);
-  left: -50px;
+  background-color: rgba(4, 222, 173, 0.80);
+  left: -10px;
   top: -300px;
   z-index: 3;
-  animation: flyPlus 12s linear infinite;
+  animation: fly 12s linear infinite;
   transform: rotate(0) translate(150px) rotate(0);
 }
 
-.app-2 {
-  border-radius: 100%;
-  width: 900px;
-  height: 800px;
-  animation: flyPlus 8s linear infinite;
-  transform: rotate(0) translate(100px) rotate(0);
-  background-color: rgba(14, 149, 119, 1);
-  bottom: -30px;
-  left: -80px;
-}
 
 .app-3 {
   border-radius: 100%;
@@ -79,8 +68,8 @@ export default {
   top: 0;
   right: 400px;
   width: 900px;
-  height: 900px;
-  background-color: rgba(241, 239, 185, 0.78);
+  height: 1000px;
+  background-color: rgba(241, 239, 185, 0.85);
   transform: rotate(0) translate(250px) rotate(0);
   animation: flyPlus 7s linear infinite;
 }
