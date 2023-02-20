@@ -1,12 +1,6 @@
-<script setup>
-import AppBackgroundComponent from "@/components/background/AppBackgroundComponent.vue";
-</script>
-
 <template>
-  <main class="relative">
-    <section
-      class="absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-0"
-    >
+  <main class="relative h-screen">
+    <section class="relative flex flex-col justify-center items-center z-0 h-full">
       <h1
         class="stretch text-6xl font-bold text-center w-full text-neutral-900"
       >
@@ -15,7 +9,7 @@ import AppBackgroundComponent from "@/components/background/AppBackgroundCompone
         NEED
       </h1>
       <img
-        class="hidden lg:block absolute -right-32 top-10 -z-20"
+        class="hidden lg:block absolute right-64 top-1/2 -translate-y-1/3 -z-20"
         src="../assets/images/arrow.svg"
         alt="Arrow"
       />
@@ -27,8 +21,12 @@ import AppBackgroundComponent from "@/components/background/AppBackgroundCompone
         GET STARTED
       </router-link>
     </section>
-    <app-background-component />
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+main {
+  background: url("../assets/images/bg-image.png") no-repeat;
+  background-size: cover;
+}
+</style>
